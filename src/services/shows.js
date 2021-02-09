@@ -17,7 +17,10 @@ export const fetchShowById = id => {
       id: json.tvShow.id,
       name: json.tvShow.name,
       status: json.tvShow.status,
-      description: json.tvShow.description,
+      description: (json.tvShow.description)
+        .replace(/<br>/g, ' ')
+        .replace(/<b>/g, '')
+        .replace('</b>', ''),
       image: json.tvShow.image_path
     }));
 };
