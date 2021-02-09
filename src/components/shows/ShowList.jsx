@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Show from './Show';
+import styles from './Shows.css';
 
 const ShowList = ({ shows }) => {
   const showElements = shows.map(show => (
@@ -13,7 +14,7 @@ const ShowList = ({ shows }) => {
   ));
 
   return (
-    <div data-testid="shows">
+    <div className={styles.showList} data-testid="shows">
       {showElements}
     </div>
   );
