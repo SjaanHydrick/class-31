@@ -1,16 +1,14 @@
-import React, { createContext } from 'react';
-import Loading from '../components/loading/Loading';
-import { fetchShows } from '../services/shows';
+import React, { createContext, useState } from 'react';
 
 export const ShowContext = createContext(null);
+const [theme, setTheme] = useState('light');
 
-// eslint-disable-next-line react/prop-types
-export const ShowProvider = ({ children }) => {
-  const { loading, shows, count, setCount } = fetchShows();
+export const ThemeProvider = ({ children }) => {
 
   return (
-    <ShowContext.Provider value={{ shows, count, setCount }}>
-      {loading ? <Loading /> : children}
+    <ShowContext.Provider value={{ theme, setTheme }}>
+      {children}
     </ShowContext.Provider>
   );
 };
+
