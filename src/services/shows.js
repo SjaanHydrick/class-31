@@ -25,14 +25,3 @@ export const fetchShowById = id => {
     }));
 };
 
-// export const fetchShowsByPage = count => {
-//   return fetch(`${URL}/most-popular/?page=${count}`)
-//     .then(res => res.json())
-//     .then(({ tv_shows }) => tv_shows.map(show => ({
-//       id: show.id,
-//       name: show.name,
-//       image: show.image_thumbnail_path
-//     })));
-// };
-
-

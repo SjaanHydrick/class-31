@@ -25,7 +25,9 @@
 
 .image {
     height: 300px;
+    width: 212px;
     margin-top: 5%;
+    object-fit: cover;
 }
 
 .name {
