@@ -1,10 +1,9 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { useShows } from '../hooks/shows';
+import PropTypes from 'prop-types';
 import styles from './ShowsPage.css';
 
-const Buttons = () => {
-  const { count, setCount } = useShows();
+const Buttons = ({ count, setCount }) => {
 
   const handleIncrease = () => setCount(count + 1);
   const handleDecrease = () => setCount(count - 1);
@@ -27,6 +26,11 @@ const Buttons = () => {
       }
     </div>
   );
+};
+
+Buttons.propTypes = {
+  count: PropTypes.number,
+  setCount: PropTypes.func
 };
 
 export default Buttons;

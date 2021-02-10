@@ -6,13 +6,13 @@ import { useShows } from '../hooks/shows';
 import Buttons from './Buttons';
 
 const ShowsPage = () => {
-  const { loading, shows } = useShows();
+  const { loading, shows, count, setCount } = useShows();
 
   if(loading) return <Loading />;
   return (
     <>
       <ShowList shows={shows} />
-      <Buttons />
+      <Buttons count={count} setCount={setCount}/>
     </>
   );
 };
