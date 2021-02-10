@@ -12,10 +12,10 @@ const ShowDetail = ({ name, status, description, image }) => (
 );
 
 ShowDetail.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  image: PropTypes.string,
+  name: PropTypes.string,
+  status: PropTypes.string,
+  description: PropTypes.string
 };
 
 export default ShowDetail;

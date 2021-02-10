@@ -10,8 +10,8 @@ const Show = ({ image, name }) => (
 );
 
 Show.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  image: PropTypes.string,
+  name: PropTypes.string
 };
 
 export default Show;

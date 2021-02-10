@@ -2,8 +2,89 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div>
+    <div
+      class="header"
+    >
+      <a
+        href="/"
+      >
+        <h1>
+          Popular Television
+        </h1>
+      </a>
+    </div>
+    <img
+      alt="loading"
+      class="loading"
+      src="https://media2.giphy.com/media/9nmRB7rnndLsk/source.gif"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App component renders Show 1`] = `
+<DocumentFragment>
+  <div
+    class="show"
+  >
+    <img
+      class="image"
+    />
+    <h2
+      class="name"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App component renders ShowDetail 1`] = `
+<DocumentFragment>
+  <div
+    class="showDetail"
+  >
+    <img
+      class="detailsImg"
+    />
+    <h2
+      class="detailsName"
+    />
+    <p
+      class="status"
+    >
+      Status: 
+    </p>
+    <p
+      class="description"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App component renders Shows 1`] = `
+<DocumentFragment>
+  <div
+    class="showList"
+    data-testid="shows"
+  >
+    <div>
+      <a
+        href="/shows/1"
+      >
+        <div
+          class="show"
+        >
+          <img
+            alt=""
+            class="image"
+            src=""
+          />
+          <h2
+            class="name"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
 </DocumentFragment>
 `;
