@@ -1,7 +1,7 @@
 const URL = 'https://www.episodate.com/api';
 
-export const fetchShows = () => {
-  return fetch(`${URL}/most-popular`)
+export const fetchShows = (count) => {
+  return fetch(`${URL}/most-popular/?page=${count}`)
     .then(res => res.json())
     .then(({ tv_shows }) => tv_shows.map(show => ({
       id: show.id,
@@ -24,5 +24,15 @@ export const fetchShowById = id => {
       image: json.tvShow.image_path
     }));
 };
+
+// export const fetchShowsByPage = count => {
+//   return fetch(`${URL}/most-popular/?page=${count}`)
+//     .then(res => res.json())
+//     .then(({ tv_shows }) => tv_shows.map(show => ({
+//       id: show.id,
+//       name: show.name,
+//       image: show.image_thumbnail_path
+//     })));
+// };
 
 
