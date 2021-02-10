@@ -15,7 +15,7 @@ const Buttons = ({ count, setCount }) => {
           ?
           <div>
             <button className={styles.next} onClick={handleIncrease}>Next Page</button>
-            <span className={styles.count}>Page {count}</span>
+            <span data-testid="span" className={styles.count}>Page {count}</span>
           </div>
           :
           <div>
