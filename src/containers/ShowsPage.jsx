@@ -2,7 +2,7 @@
 import React from 'react';
 import ShowList from '../components/shows/ShowList';
 import Loading from '../components/loading/Loading';
-import { useShows } from '../hooks/shows';
+import { useShows } from '../state/shows';
 import Buttons from './Buttons';
 
 const ShowsPage = () => {
