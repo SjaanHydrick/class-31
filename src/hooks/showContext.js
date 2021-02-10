@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import Loading from '../components/loading/Loading';
-import { fetchShows } from './shows';
+import { fetchShows } from '../services/shows';
 
 export const ShowContext = createContext(null);
 
