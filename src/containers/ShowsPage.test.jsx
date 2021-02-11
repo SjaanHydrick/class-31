@@ -6,6 +6,7 @@ import { setupServer } from 'msw/node';
 import showsApiResponse from '../fixtures/shows.json';
 import { MemoryRouter } from 'react-router-dom';
 import ShowsPage from './ShowsPage';
+import { ThemeProvider } from '../state/showContext';
 
 const server = setupServer(
   rest.get('https://www.episodate.com/api/most-popular/?page=1', (req, res, ctx) => {
@@ -19,9 +20,11 @@ describe('ShowsPage container', () => {
 
   it('fetches and displays a list of shows', async() => {
     render(
-      <MemoryRouter>
-        <ShowsPage />
-      </MemoryRouter>
+      <ThemeProvider>
+        <MemoryRouter>
+          <ShowsPage />
+        </MemoryRouter>
+      </ThemeProvider>
     );
 
     screen.getByAltText('loading');

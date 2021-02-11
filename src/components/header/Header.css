@@ -7,8 +7,9 @@ body {
 }
 
 .header {
-    height: 100px;
+    height: 130px;
     margin: 0;
+    padding-top: 2%;
     text-align: center;
     border-bottom: solid 10px darkcyan;
 }
@@ -27,4 +28,27 @@ h1 {
 h1:hover {
     color: cornflowerblue;
     transition-duration: 1s;
+}
+
+.dark {
+    background-color: darkcyan;
+    color: cornsilk;
+}
+
+.dark .header {
+    border-bottom: solid 10px salmon;
+}
+
+.dark h1 {
+    color: cornsilk;
+}
+
+.dark h1:hover {
+    color: lavender;
+    transition-duration: 1s;
+}
+
+.darkMode, .lightMode {
+    font-family: Nunito;
+    font-weight: 900;
 }

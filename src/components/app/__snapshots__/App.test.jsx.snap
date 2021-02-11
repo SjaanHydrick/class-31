@@ -4,15 +4,27 @@ exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="header"
+      class="light"
     >
-      <a
-        href="/"
+      <div
+        class="header"
       >
-        <h1>
-          Popular Television
-        </h1>
-      </a>
+        <span
+          class="darkMode"
+        >
+          Dark Mode
+        </span>
+        <input
+          type="checkbox"
+        />
+        <a
+          href="/"
+        >
+          <h1>
+            Popular Television
+          </h1>
+        </a>
+      </div>
     </div>
     <img
       alt="loading"
@@ -26,14 +38,18 @@ exports[`App component renders App 1`] = `
 exports[`App component renders Show 1`] = `
 <DocumentFragment>
   <div
-    class="show"
+    class="light"
   >
-    <img
-      class="image"
-    />
-    <h2
-      class="name"
-    />
+    <div
+      class="show"
+    >
+      <img
+        class="image"
+      />
+      <h2
+        class="name"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -41,22 +57,26 @@ exports[`App component renders Show 1`] = `
 exports[`App component renders ShowDetail 1`] = `
 <DocumentFragment>
   <div
-    class="showDetail"
+    class="light"
   >
-    <img
-      class="detailsImg"
-    />
-    <h2
-      class="detailsName"
-    />
-    <p
-      class="status"
+    <div
+      class="showDetail"
     >
-      Status: 
-    </p>
-    <p
-      class="description"
-    />
+      <img
+        class="detailsImg"
+      />
+      <h2
+        class="detailsName"
+      />
+      <p
+        class="status"
+      >
+        Status: 
+      </p>
+      <p
+        class="description"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -72,16 +92,20 @@ exports[`App component renders Shows 1`] = `
         href="/shows/1"
       >
         <div
-          class="show"
+          class="light"
         >
-          <img
-            alt=""
-            class="image"
-            src=""
-          />
-          <h2
-            class="name"
-          />
+          <div
+            class="show"
+          >
+            <img
+              alt=""
+              class="image"
+              src=""
+            />
+            <h2
+              class="name"
+            />
+          </div>
         </div>
       </a>
     </div>

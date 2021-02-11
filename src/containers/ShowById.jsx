@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useShowById } from '../hooks/shows';
+import { useShowById } from '../state/shows';
 import ShowDetail from '../components/details/ShowDetail';
 import Loading from '../components/loading/Loading';
 

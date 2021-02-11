@@ -17,9 +17,17 @@
     border-radius: 10px;
 }
 
+.dark .show {
+    border: solid 3px salmon;
+}
 
 .show:hover {
     background-color: lavender;
+    transition-duration: 1s;
+}
+
+.dark .show:hover {
+    background-color: rebeccapurple;
     transition-duration: 1s;
 }
 
@@ -34,4 +42,8 @@
     font-family: 'Abril Fatface';
     letter-spacing: .2pt;
     color: indianred;
+}
+
+.dark .name {
+    color: cornsilk;
 }
