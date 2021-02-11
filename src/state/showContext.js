@@ -1,14 +1,26 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
-export const ShowContext = createContext(null);
-const [theme, setTheme] = useState('light');
+export const ThemeContext = createContext(null);
 
+// eslint-disable-next-line react/prop-types
 export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+
+  const toggle = ({ target }) => {
+    if(target.checked) setTheme(() => 'dark');
+    else setTheme(() => 'light');
+  };
 
   return (
-    <ShowContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, toggle }}>
       {children}
-    </ShowContext.Provider>
+    </ThemeContext.Provider>
   );
 };
 
+export const useTheme = () => {
+  const { theme } = useContext(ThemeContext);
+  const { setTheme } = useContext(ThemeContext);
+  const { toggle } = useContext(ThemeContext);
+  return { theme, setTheme, toggle };
+};

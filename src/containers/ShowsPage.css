@@ -39,3 +39,19 @@
     font-size: 18pt;
 }
 
+.dark {
+    height: 100%;
+    margin: 0;
+    background-color: darkcyan;
+    border: solid 1px darkcyan;
+}
+
+.dark .next {
+    background-color: cornsilk;
+    color: darkcyan;
+}
+
+.dark .previous {
+    background-color: salmon;
+    color: darkcyan;
+}

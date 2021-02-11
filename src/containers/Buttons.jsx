@@ -14,14 +14,14 @@ const Buttons = ({ count, setCount }) => {
         count === 1
           ?
           <div>
-            <button className={styles.next} onClick={handleIncrease}>Next Page</button>
+            <button className={styles.next} onClick={handleIncrease}>Next</button>
             <span data-testid="span" className={styles.count}>Page {count}</span>
           </div>
           :
           <div>
-            <button className={styles.previous} onClick={handleDecrease}>Previous Page</button>
+            <button className={styles.previous} onClick={handleDecrease}>Previous</button>
             <span className={styles.count}>Page {count}</span>
-            <button className={styles.next} onClick={handleIncrease}>Next Page</button>
+            <button className={styles.next} onClick={handleIncrease}>Next</button>
           </div>
       }
     </div>
