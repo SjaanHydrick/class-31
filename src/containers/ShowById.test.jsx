@@ -5,6 +5,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import showByIdResponse from '../fixtures/showById.json';
 import ShowById from './ShowById';
+import { ThemeProvider } from '../state/showContext';
 
 const server = setupServer(
   rest.get('https://www.episodate.com/api/show-details/?q=29560', (req, res, ctx) => {
@@ -17,7 +18,10 @@ describe('ShowById container', () => {
   afterAll(() => server.close());
 
   it('fetches and displays a shows details', async() => {
-    render(<ShowById match={{ params: { id: '29560' } }} />);
+    render(
+      <ThemeProvider>
+        <ShowById match={{ params: { id: '29560' } }} />
+      </ThemeProvider>);
 
     screen.getByAltText('loading');
 

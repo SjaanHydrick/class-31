@@ -6,6 +6,7 @@ import App from './App';
 import Show from '../shows/Show.jsx';
 import ShowList from '../shows/ShowList.jsx';
 import ShowDetail from '../details/ShowDetail.jsx';
+import { ThemeProvider } from '../../state/showContext';
 
 describe('App component', () => {
   afterEach(() => cleanup());
@@ -23,26 +24,36 @@ describe('App component', () => {
     }];
 
     const { asFragment } = render(
-      <BrowserRouter>
-        <Show {...arrow} />
-      </BrowserRouter>);
+      <ThemeProvider>
+        <BrowserRouter>
+          <Show {...arrow} />
+        </BrowserRouter>
+      </ThemeProvider>
+    );
+
     expect(asFragment()).toMatchSnapshot();
+
   });
 
   it('renders Shows', () => {
     const shows = [{ id: 1, name: '', image: '' }];
     const { asFragment } = render(
-      <BrowserRouter>
-        <ShowList shows={shows}/>
-      </BrowserRouter>);
+      <ThemeProvider>
+        <BrowserRouter>
+          <ShowList shows={shows}/>
+        </BrowserRouter>
+      </ThemeProvider>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders ShowDetail', () => {
     const { asFragment } = render(
-      <BrowserRouter>
-        <ShowDetail path={'shows/23455'} />
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <ShowDetail path={'shows/23455'} />
+        </BrowserRouter>
+      </ThemeProvider>
     );
     expect(asFragment()).toMatchSnapshot();
   });
